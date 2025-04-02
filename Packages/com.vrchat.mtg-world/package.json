@@ -1,0 +1,36 @@
+{
+	"name": "com.vrchat.mtg-world",
+	"displayName": "MTG World",
+	"version": "1.0.0",
+	"description": "MTG VRChat World Project",
+	"url": "https://github.com/username/mtg-vrchat",
+	"author": {
+		"name": "Your Name",
+		"email": "your.email@example.com",
+		"url": "https://your-website.com"
+	},
+	"vpmDependencies": {
+		"com.vrchat.worlds": "^3.4.1",
+		"com.vrchat.base": "^3.4.1",
+		"com.vrchat.udonsharp": "^1.1.9"
+	},
+	"unity": "2022.3",
+	"unityRelease": "6f1",
+	"dependencies": {},
+	"samples": [
+		{
+			"displayName": "Basic MTG Table",
+			"description": "Basic table setup for MTG gameplay",
+			"path": "Samples~/BasicTable"
+		},
+		{
+			"displayName": "Standard Format Setup",
+			"description": "Complete setup for Standard format gameplay",
+			"path": "Samples~/StandardFormat"
+		}
+	],
+	"legacyFolders": {
+		"Assets\\MTG_VRChat": "9a293b65e6e14f345b15d8e01f1fab14"
+	},
+	"legacyFiles": {}
+}

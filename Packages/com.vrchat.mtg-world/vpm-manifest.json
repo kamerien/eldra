@@ -1,0 +1,32 @@
+{
+	"dependencies": {
+		"com.vrchat.worlds": "3.4.1",
+		"com.vrchat.base": "3.4.1",
+		"com.vrchat.udonsharp": "1.1.9"
+	},
+	"locked": {
+		"com.vrchat.worlds": {
+			"version": "3.4.1",
+			"dependencies": {
+				"com.vrchat.base": "3.4.1"
+			}
+		},
+		"com.vrchat.base": {
+			"version": "3.4.1",
+			"dependencies": {}
+		},
+		"com.vrchat.udonsharp": {
+			"version": "1.1.9",
+			"dependencies": {
+				"com.vrchat.worlds": "3.4.1"
+			}
+		}
+	},
+	"localPath": "Packages/com.vrchat.mtg-world",
+	"manifestVersion": "1.1.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/username/mtg-vrchat.git",
+		"revision": ""
+	}
+}
