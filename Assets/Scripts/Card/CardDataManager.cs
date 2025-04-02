@@ -31,6 +31,7 @@ public class CardDataManager : UdonSharpBehaviour
     }
 
     private Dictionary<string, CardData> cardDatabase = new Dictionary<string, CardData>();
+    private Dictionary<string, string> cardNameToId = new Dictionary<string, string>();
     private Dictionary<string, Texture2D> cardTextures = new Dictionary<string, Texture2D>();
 
     [Header("Format Settings")]
@@ -67,6 +68,21 @@ public class CardDataManager : UdonSharpBehaviour
         GET https://api.scryfall.com/cards/search?q=format:standard+legal:standard （例：スタンダード）
         GET https://api.scryfall.com/cards/search?q=format:pioneer+legal:pioneer （例：パイオニア）
         */
+
+        // カード名からIDへのマッピングを作成
+        foreach (var card in cardDatabase)
+        {
+            if (!cardNameToId.ContainsKey(card.Value.name.ToLower()))
+            {
+                cardNameToId.Add(card.Value.name.ToLower(), card.Key);
+            }
+        }
+    }
+
+    public string FindCardIdByName(string cardName)
+    {
+        string normalizedName = cardName.ToLower();
+        return cardNameToId.ContainsKey(normalizedName) ? cardNameToId[normalizedName] : "";
     }
 
     // カード情報の取得
